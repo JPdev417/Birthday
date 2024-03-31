@@ -23,4 +23,4 @@ fi
 
 curl https://birthday-seven-sand.vercel.app/bday.ogg -s  > /tmp/song.ogg && afplay /tmp/song.ogg # Download and play the song
 
-rm /tmp/song.mp3 # Remove the song after playing
+rm /tmp/song.ogg # Remove the song after playing
