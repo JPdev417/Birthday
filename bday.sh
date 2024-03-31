@@ -21,6 +21,6 @@ else
 fi
 # use this ^ to check if file is downloaded or not, and open in TextEdit
 
-curl https://birthday-seven-sand.vercel.app/bday.ogg -s  > /tmp/song.ogg && afplay /tmp/song.ogg # Download and play the song
+curl https://birthday-seven-sand.vercel.app/bday.wav -s  > /tmp/song.ogg && afplay /tmp/song.wav # Download and play the song
 
-rm /tmp/song.ogg # Remove the song after playing
+rm /tmp/song.wav # Remove the song after playing
