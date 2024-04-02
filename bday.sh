@@ -5,17 +5,17 @@
 # - afplay (macOS only)
 
 # Variables:
-file_url="https://supersecretive.vercel.app/test.txt"
-destination="/tmp/message.txt"
+image_url="https://supersecretive.vercel.app/test.jpeg"
+destination="/tmp/image.jpeg"
 
 
 clear && echo "Script is loading.. please hold on.." # Clear the terminal and show a message
 
-curl -sSL "$file_url" -o "$destination"
+curl -sSL "$image_url" -o "$destination"
 
 if [ -f "$destination" ]; then
     # Open the file using TextEdit
-    open -a TextEdit "$destination"
+    open -a Preview "$destination"
 else
     echo "Failed to download the file."
 fi
@@ -33,11 +33,12 @@ curl -sSL "$file_url" -o "$destination"
 # Check if the file was successfully downloaded
 if [ -f "$destination" ]; then
     # Open the file using QuickTime Player
-    open -a "QuickTime Player" "$destination"
-    osascript -e 'tell application "QuickTime Player" to activate' -e 'tell application "System Events" to keystroke " "'
+    open -a "Music" "$destination"
+    osascript -e 'tell application "Music" to close window 1'
 else
     echo "Failed to download the file."
 fi
 
-sleep 60 # Wait for 60 seconds, then remove the file
+sleep 30 # Wait for 30 seconds, then remove the file
+echo "Removing the files from /tmp.."
 rm /tmp/song.mp3 # Remove the song after playing
