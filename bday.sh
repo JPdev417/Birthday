@@ -5,7 +5,7 @@
 # - afplay (macOS only)
 
 # Variables:
-image_url="https://supersecretive.vercel.app/test.jpeg"
+image_url="https://supersecretive.vercel.app/carta.png"
 destination="/tmp/image.jpeg"
 
 
